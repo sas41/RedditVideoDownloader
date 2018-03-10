@@ -19,7 +19,7 @@
 // @downloadURL         https://raw.githubusercontent.com/sas41/RedditVideoDownloader/master/RedditVideoDownloader.js
 // @updateURL           https://raw.githubusercontent.com/sas41/RedditVideoDownloader/master/RedditVideoDownloader.js
 // @supportURL          https://github.com/sas41/RedditVideoDownloader/issues
-// @version             1.0.2
+// @version             1.0.3
 // ==/UserScript==
 
 // ==OpenUserJS==
