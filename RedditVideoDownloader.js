@@ -37,7 +37,8 @@ function getJSON(url) {
     xhr.onload = function() {
         var status = xhr.status;
         if (status === 200) {
-            downloadURI(xhr.response.data.children[0].data.secure_media.reddit_video.fallback_url, "Video");
+            var downloadLink = xhr.response[0].data.children[0].data.secure_media.reddit_video.fallback_url;
+            downloadURI(downloadLink, "Video");
         }
         else
         {
@@ -61,7 +62,7 @@ $(window).bind('keydown', function(event) {
         if (String.fromCharCode(event.which).toLowerCase() === 's')
         {
             event.preventDefault();
-            getJSON(jsonLink, downloadVideo);
+            getJSON(jsonLink);
         }
     }
 });
