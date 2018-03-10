@@ -1,9 +1,15 @@
 // ==UserScript==
 // @name        Reddit Video Downloader
 // @author      Berk "SAS41" Alyamach
+// @homepage    https://github.com/sas41/
 // @description A script to that allows you to download videos hosted on Reddit by pressing Ctrl+S or Meta+S on the comments section.
+
 // @namespace   reddit
 // @include     *://*reddit.com/r/*/*/*/*/
+
+// @downloadURL https://raw.githubusercontent.com/sas41/RedditVideoDownloader/master/RedditVideoDownloader.js
+// @updateURL   https://raw.githubusercontent.com/sas41/RedditVideoDownloader/master/RedditVideoDownloader.js
+// @supportURL  https://github.com/sas41/RedditVideoDownloader/issues
 // @version     1.0
 // ==/UserScript==
 
