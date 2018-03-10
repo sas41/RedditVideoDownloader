@@ -1,17 +1,30 @@
 // ==UserScript==
-// @name        Reddit Video Downloader
-// @author      Berk "SAS41" Alyamach
-// @homepage    https://github.com/sas41/
-// @description A script to that allows you to download videos hosted on Reddit by pressing Ctrl+S or Meta+S on the comments section.
+// @name                Reddit Video Downloader
+// @author              Berk "SAS41" Alyamach
+// @homepage            https://github.com/sas41/
+// @description         A script to that allows you to download videos hosted on Reddit by pressing Ctrl+S or Meta+S on the comments section.
+// @iconURL             https://github.com/sas41/RedditVideoDownloader/blob/master/icons/RVD_icon_32.png
+// @icon64URL           https://github.com/sas41/RedditVideoDownloader/blob/master/icons/RVD_icon_64.png
 
-// @namespace   reddit
-// @include     *://*reddit.com/r/*/*/*/*/
+// @copyright           2018, Berk (sas41) Alyamach - https://github.com/sas41/
+// @license             The Unlicense (https://raw.githubusercontent.com/sas41/RedditVideoDownloader/master/LICENSE)
+// @grant               none
 
-// @downloadURL https://raw.githubusercontent.com/sas41/RedditVideoDownloader/master/RedditVideoDownloader.js
-// @updateURL   https://raw.githubusercontent.com/sas41/RedditVideoDownloader/master/RedditVideoDownloader.js
-// @supportURL  https://github.com/sas41/RedditVideoDownloader/issues
-// @version     1.0
+// @contributionAmount  €1.00
+// @contributionURL     https://www.paypal.me/sas41/1
+
+// @namespace           reddit
+// @include             *://*reddit.com/r/*/*/*/*/
+
+// @downloadURL         https://raw.githubusercontent.com/sas41/RedditVideoDownloader/master/RedditVideoDownloader.js
+// @updateURL           https://raw.githubusercontent.com/sas41/RedditVideoDownloader/master/RedditVideoDownloader.js
+// @supportURL          https://github.com/sas41/RedditVideoDownloader/issues
+// @version             1.0.1
 // ==/UserScript==
+
+// ==OpenUserJS==
+// @author              sas41
+// ==/OpenUserJS==
 
 var jsonLink = document.location.href + '.json';
 
