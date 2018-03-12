@@ -2,7 +2,10 @@
 // @name                Reddit Video Downloader
 // @author              Berk "SAS41" Alyamach
 // @homepage            https://github.com/sas41/
+// @homepageURL         https://github.com/sas41/
 // @description         A script to that allows you to download videos hosted on Reddit by pressing Ctrl+S or Meta+S on the comments section.
+
+// @icon                https://github.com/sas41/RedditVideoDownloader/blob/master/icons/RVD_icon_32.png?raw=true
 // @iconURL             https://github.com/sas41/RedditVideoDownloader/blob/master/icons/RVD_icon_32.png?raw=true
 // @icon64URL           https://github.com/sas41/RedditVideoDownloader/blob/master/icons/RVD_icon_64.png?raw=true
 
@@ -19,7 +22,7 @@
 // @downloadURL         https://raw.githubusercontent.com/sas41/RedditVideoDownloader/master/RedditVideoDownloader.js
 // @updateURL           https://raw.githubusercontent.com/sas41/RedditVideoDownloader/master/RedditVideoDownloader.js
 // @supportURL          https://github.com/sas41/RedditVideoDownloader/issues
-// @version             1.0.3
+// @version             1.0.4
 // ==/UserScript==
 
 // ==OpenUserJS==
@@ -29,16 +32,32 @@
 // ==/OpenUserJS==
 
 var jsonLink = document.location.href + '.json';
+var downloadLink = '';
 
-function getJSON(url) {
+function getJSON(url)
+{
     var xhr = new XMLHttpRequest();
     xhr.open('GET', url, true);
     xhr.responseType = 'json';
-    xhr.onload = function() {
+    xhr.onload = function()
+    {
         var status = xhr.status;
-        if (status === 200) {
-            var downloadLink = xhr.response[0].data.children[0].data.secure_media.reddit_video.fallback_url;
-            downloadURI(downloadLink, "Video");
+        if (status === 200)
+        {
+            var response = xhr.response;
+            if (!response[0].data.children[0].data.secure_media.reddit_video.is_gif)
+            {
+                if(confirm('Unfortunately, Reddit doesn\'t support saving of audio along with the video, Download without audio?'))
+                {
+                    downloadLink = response[0].data.children[0].data.secure_media.reddit_video.fallback_url;
+                    downloadURI(downloadLink,'');
+                }
+            }
+            else
+            {
+                downloadLink = response[0].data.children[0].data.secure_media.reddit_video.fallback_url;
+                    downloadURI(downloadLink,'');
+            }
         }
         else
         {
@@ -48,22 +67,26 @@ function getJSON(url) {
     xhr.send();
 }
 
-function downloadURI(uri, name) {
-  var link = document.createElement("a");
-  link.download = name;
-  link.href = uri;
-  document.body.appendChild(link);
-  link.click();
-  document.body.removeChild(link);
+function downloadURI(url, n)
+{
+    var save = document.createElement('a');
+    save.href = url;
+    save.download = n || url;
+    
+    var event = document.createEvent("MouseEvents");
+    event.initMouseEvent("click", true, false, window, 0, 0, 0, 0, 0, false, false, false, false, 0, null);
+    save.dispatchEvent(event);
+    
+    document.body.removeChild(save);
 }
 
-$(window).bind('keydown', function(event) {
-    if (event.ctrlKey || event.metaKey) {
-        if (String.fromCharCode(event.which).toLowerCase() === 's')
+document.addEventListener('keydown', (event) => {
+    if (event.ctrlKey || event.metaKey)
+    {
+        if (event.key === 's' || event.key === 'S' )
         {
             event.preventDefault();
             getJSON(jsonLink);
         }
     }
 });
-
