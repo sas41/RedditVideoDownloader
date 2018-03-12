@@ -1,0 +1,24 @@
+{
+  "content_scripts": [
+    {
+      "js": [
+        "redditvideodownloader.js"
+      ],
+      "matches": [
+        "*://www.reddit.com/r/*/*/*/*/",
+        "*://www.np.reddit.com/r/*/*/*/*/"
+      ]
+    }
+  ],
+  "manifest_version": 2,
+  "description": "Save Videos hosted on Reddit",
+  "name": "Reddit Video Downloader",
+  "version": "1.0.4",
+  "browser_action": {
+    "default_icon": "icons/RVD_icon_128.png"
+  },
+  "permissions": [
+    "*://www.reddit.com/r/*/*/*/*/",
+    "*://www.np.reddit.com/r/*/*/*/*/"
+  ]
+}
