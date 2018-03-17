@@ -17,7 +17,7 @@
 // @contributionURL     https://www.paypal.me/sas41/1
 
 // @namespace           reddit
-// @include             *://*reddit.com/r/*/*/*/*/
+// @include             *://*reddit.com/r/*/*/*/*
 
 // @downloadURL         https://raw.githubusercontent.com/sas41/RedditVideoDownloader/master/RedditVideoDownloader.js
 // @updateURL           https://raw.githubusercontent.com/sas41/RedditVideoDownloader/master/RedditVideoDownloader.js
