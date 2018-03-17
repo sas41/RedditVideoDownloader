@@ -79,7 +79,7 @@ function downloadURI(url, n)
 
     try
     {
-        document.body.removeChild(save);;
+        document.body.removeChild(save);
     }
     catch(err){}
 }
