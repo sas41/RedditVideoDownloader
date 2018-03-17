@@ -31,7 +31,7 @@
 // @contributionURL     https://www.paypal.me/sas41/1
 // ==/OpenUserJS==
 
-var jsonLink = document.location.href + '.json';
+var jsonLink = document.location.href.split('?')[0] + '.json';
 var downloadLink = '';
 
 function getJSON(url)
