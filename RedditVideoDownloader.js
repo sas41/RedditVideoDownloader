@@ -22,7 +22,7 @@
 // @downloadURL         https://raw.githubusercontent.com/sas41/RedditVideoDownloader/master/RedditVideoDownloader.js
 // @updateURL           https://raw.githubusercontent.com/sas41/RedditVideoDownloader/master/RedditVideoDownloader.js
 // @supportURL          https://github.com/sas41/RedditVideoDownloader/issues
-// @version             1.0.4
+// @version             1.0.5
 // ==/UserScript==
 
 // ==OpenUserJS==
@@ -76,8 +76,12 @@ function downloadURI(url, n)
     var event = document.createEvent("MouseEvents");
     event.initMouseEvent("click", true, false, window, 0, 0, 0, 0, 0, false, false, false, false, 0, null);
     save.dispatchEvent(event);
-    
-    document.body.removeChild(save);
+
+    try
+    {
+        document.body.removeChild(save);;
+    }
+    catch(err){}
 }
 
 document.addEventListener('keydown', (event) => {
