@@ -6,7 +6,7 @@
 
 Please keep in mind that Reddit doesn't support downloading Audio with Video files, for that, you might want to look in to Youtube-dl (which now supports Reddit as well).
 
-Also available as an extention for:
+Also available as an extension for:
 
 -   Opera (If the curators ever take a look at my submission)
 -   Chrome (I honestly can't afford the 5$ they are asking for)
