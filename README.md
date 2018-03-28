@@ -6,11 +6,11 @@
 
 Please keep in mind that Reddit doesn't support downloading Audio with Video files, for that, you might want to look in to Youtube-dl (which now supports Reddit as well).
 
-Currently supporting:
+Also available as an extention for:
 
--   Opera
--   Chrome
--   FireFox
+-   Opera (If the curators ever take a look at my submission)
+-   Chrome (I honestly can't afford the 5$ they are asking for)
+-   [FireFox](https://addons.mozilla.org/en-US/firefox/addon/reddit-video-downloader/)
 
 If you find this script helpful, please consider donating an amount you see fit here:  
 [https://www.paypal.me/sas41/1](https://www.paypal.me/sas41/1)
