@@ -5,7 +5,8 @@ Also available as an extension for:
 
 -   Opera
 -   Chrome
--   [FireFox] (https://addons.mozilla.org/en-US/firefox/addon/reddit-video-downloader/)
+-   [FireFox](https://addons.mozilla.org/en-US/firefox/addon/reddit-video-downloader/)
+
 ... and as a UserScript.
 
 FireFox:
