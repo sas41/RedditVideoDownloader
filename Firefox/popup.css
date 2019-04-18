@@ -1,0 +1,87 @@
+body {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    width: 300px;
+    font-size: 16px;
+}
+
+@-webkit-keyframes rainbow {
+    0%{background-position:0% 82%}
+    50%{background-position:100% 19%}
+    100%{background-position:0% 82%}
+}
+
+@-moz-keyframes rainbow {
+    0%{background-position:0% 82%}
+    50%{background-position:100% 19%}
+    100%{background-position:0% 82%}
+}
+
+@-o-keyframes rainbow {
+    0%{background-position:0% 82%}
+    50%{background-position:100% 19%}
+    100%{background-position:0% 82%}
+}
+
+@keyframes rainbow { 
+    0%{background-position:0% 82%}
+    50%{background-position:100% 19%}
+    100%{background-position:0% 82%}
+}
+
+input{
+    background: linear-gradient(124deg, #ff6349, #e8b71d, #88e297, #1ddde8, #7faaef, #e8a5ef);
+	background-size: 1800% 1800%;
+    border: none;
+    border-radius: 12px;
+    color: black;
+    padding: 8px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    font-weight: bold;
+    margin: 2px 2px;
+
+	-webkit-animation: rainbow 10s ease infinite;
+	-z-animation: rainbow 10s ease infinite;
+	-o-animation: rainbow 10s ease infinite;
+	animation: rainbow 10s ease infinite;
+}
+
+.download{
+    background-color: #4CAF50;
+    background-image: none;
+    color: white;
+}
+
+input:active{
+	background: #e5e5e5;
+}
+
+input[type=checkbox] {
+	display:none;
+}
+ 
+input[type=checkbox] + label
+{
+	background-image: url("icons/down.png");
+	background-repeat: no-repeat;
+	background-size: 24px 24px;
+	min-width: 80%;
+	min-height: 24px;
+	display:inline-block;
+	padding-left: 10%;
+}
+
+input[type=checkbox]:checked + label
+{
+	background-image: url("icons/up.png");
+	background-repeat: no-repeat;
+	background-size: 24px 24px;
+	min-width: 80%;
+	min-height: 24px;
+	display:inline-block;
+	padding-left: 10%;
+}

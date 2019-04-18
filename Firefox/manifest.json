@@ -1,0 +1,42 @@
+{
+  "applications": {
+    "gecko": {
+      "id": "RedditVideoDownloader@sas41.ext",
+      "strict_min_version": "48.0"
+    }
+  },
+  "background": {
+    "scripts": [
+      "background.js"
+    ],
+    "persistent": false
+  },
+  "manifest_version": 2,
+  "description": "Save Videos hosted on Reddit",
+  "name": "Reddit Video Downloader",
+  "version": "1.0.8",
+  "page_action": {
+    "default_icon": {
+      "16": "icons/RVD_icon_16.png",
+      "32": "icons/RVD_icon_32.png",
+      "64": "icons/RVD_icon_64.png"
+    },
+    "default_title": "Reddit Video Downloader",
+    "default_popup": "popup.html"
+  },
+  "icons": {
+    "16": "icons/RVD_icon_16.png",
+    "32": "icons/RVD_icon_32.png",
+    "64": "icons/RVD_icon_64.png",
+    "128": "icons/RVD_icon_128.png"
+  },
+  "permissions": [
+    "tabs",
+    "downloads",
+    "storage",
+    "*://*.reddit.com/*",
+    "*://np.reddit.com/r/*/*/*/*",
+    "*://nb.reddit.com/r/*/*/*/*",
+    "*://old.reddit.com/r/*/*/*/*"
+  ]
+}
