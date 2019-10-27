@@ -1,4 +1,10 @@
 
+## Attention!
+## This project is deprecated!
+
+## Please move on to [Universal Media Downloader](https://github.com/sas41/UniversalMediaDownloader)
+
+
 ## Download Videos hosted on Reddit!
 
 Also available as an extension for:
@@ -22,4 +28,4 @@ Please keep in mind that Reddit doesn't support downloading Audio with Video fil
 
 
 If you've found this helpful, please consider donating an amount you see fit here:  
-[https://www.paypal.me/sas41/1](https://www.paypal.me/sas41/1)
+[https://www.paypal.me/sas41/2](https://www.paypal.me/sas41/2)
